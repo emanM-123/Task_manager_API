@@ -1,0 +1,49 @@
+{
+  "host": "localhost",
+  "port": 3113,
+  "domain": "localhost",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "localDb":"d9",
+    "globalDb": "d0"
+  },
+  "localRedis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "authTokenName": "lntkt",
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "+6dE8JBZS4ACf+7amn4sYxMh24s=",
+    "authStrategies": [
+      "jwt",
+      "local",
+      "local-username"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "local-username": {
+      "usernameField": "username",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/task_manager"
+}

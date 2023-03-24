@@ -1,0 +1,94 @@
+{
+  "name": "task-manager",
+  "description": "task manager",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "eman",
+    "email": "emanm@lecturenotes.in"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^14.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "yarn run eslint && yarn run jest",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "dev": "nodemon --exec babel-node src/",
+    "start": "NODE_ENV=production  babel-node src/",
+    "jest": "jest  --forceExit",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": []
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.38.0",
+    "@aws-sdk/util-endpoints": "^3.192.0",
+    "@feathersjs/authentication": "^4.5.11",
+    "@feathersjs/authentication-local": "^4.5.11",
+    "@feathersjs/authentication-oauth": "^4.5.11",
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/transport-commons": "^4.5.11",
+    "@ln/ln-data-model": "^0.0.1",
+    "aws-sdk": "^2.1106.0",
+    "base-64": "^1.0.0",
+    "compression": "^1.7.4",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "csv-parser": "^3.0.0",
+    "cuid": "^2.1.8",
+    "exceljs": "^4.3.0",
+    "feathers-hooks-common": "^5.0.6",
+    "feathers-mongoose": "^8.3.1",
+    "feathers-swagger": "^1.2.1",
+    "helmet": "^4.3.1",
+    "html-purify": "^1.1.0",
+    "html2text": "^6.0.0",
+    "json-logic-js": "^2.0.2",
+    "jwt-decode": "^3.1.2",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^5.11.9",
+    "mongoose-dbref": "^0.0.4",
+    "multer": "^1.4.3",
+    "multer-s3": "^2.10.0",
+    "mustache": "^4.2.0",
+    "query-string": "^7.0.1",
+    "sanitize-html": "^2.5.3",
+    "serve-favicon": "^2.5.0",
+    "slug": "^8.0.0",
+    "uniqid": "^5.4.0",
+    "utf8": "^3.0.0",
+    "winston": "^3.0.0",
+    "workerpool": "^6.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.18.2",
+    "axios": "^0.26.0",
+    "eslint": "^7.32.0",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.15"
+  }
+}
