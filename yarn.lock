@@ -3850,6 +3850,15 @@ feathers-hooks-common@^5.0.6:
     process "0.11.10"
     traverse "^0.6.6"
 
+feathers-mongodb@^6.3.0:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/feathers-mongodb/-/feathers-mongodb-6.4.1.tgz#594dad260ac60883e741a0bc9792130ad1228a88"
+  integrity sha512-EZssrp/EIeMxQ3qzNOdlXbUoTXOKvwCMsuYZ5JuPsahRjQluxPEY2WIKmBAzFi4/Jgfl+JhQQLxceRTjZlsynw==
+  dependencies:
+    "@feathersjs/adapter-commons" "^4.5.11"
+    "@feathersjs/commons" "^4.5.11"
+    "@feathersjs/errors" "^4.5.11"
+
 feathers-mongoose@^8.3.1:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/feathers-mongoose/-/feathers-mongoose-8.5.1.tgz#ddd94dbdf0a9393cc28482341fc5e57eaf8b6675"
@@ -5076,7 +5085,7 @@ mongodb-core@^3.2.7:
   optionalDependencies:
     saslprep "^1.0.0"
 
-mongodb@3.7.3:
+mongodb@3.7.3, mongodb@^3.6.3:
   version "3.7.3"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.7.3.tgz#b7949cfd0adc4cc7d32d3f2034214d4475f175a5"
   integrity sha512-Psm+g3/wHXhjBEktkxXsFMZvd3nemI0r3IPsE0bU+4//PnvNWKkzhZcEsbPcYiWqe8XqXJJEg4Tgtr7Raw67Yw==

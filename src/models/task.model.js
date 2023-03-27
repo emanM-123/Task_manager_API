@@ -9,8 +9,8 @@ module.exports = function (app) {
   const schema = new Schema({
     title: { type: String, required: true },
     description: { type: String },
-    dueDate: { type: String, required: true }
-
+    dueDate: { type: Date },
+    deleted: { type: Boolean, default:false}
   }, {
     timestamps: true
   });

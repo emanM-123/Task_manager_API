@@ -1,14 +1,24 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-import getDataBySort from './hooks/getTaskBySort';
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
-    find: [getDataBySort()],
+    all: [authenticate('jwt')],
+    find: [
+      async (context) => {
+        const { status } = context.params.query;
+        console.log(status);
+        if (status && status === 'Pending') {
+          context.params.query = { dueDate: { $gte : new Date() } };
+        }
+        if (status && status === 'Completed') {
+          context.params.query = { dueDate: { $lte : new Date() } };
+        }
+      },
+    ],
     get: [],
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   after: {
@@ -18,7 +28,7 @@ module.exports = {
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [],
   },
 
   error: {
@@ -28,6 +38,6 @@ module.exports = {
     create: [],
     update: [],
     patch: [],
-    remove: []
-  }
+    remove: [],
+  },
 };
